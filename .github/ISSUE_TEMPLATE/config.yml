@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Pregunta o Soporte
+    url: https://github.com/victalejo/wasapaso-python-sdk/discussions
+    about: Haz preguntas o busca soporte en GitHub Discussions
+  - name: Documentación
+    url: https://docs.wasapaso.com/sdk/python
+    about: Consulta la documentación oficial del SDK
+  - name: Soporte Email
+    url: mailto:support@wasapaso.com
+    about: Contacta al equipo de soporte por email
