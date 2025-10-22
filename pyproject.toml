@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wasapaso"
-version = "0.1.0"
+version = "0.1.1"
 description = "SDK de Python oficial para la API de Wasapaso - Gestión de WhatsApp"
 readme = "README.md"
 authors = [

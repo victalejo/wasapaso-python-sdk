@@ -71,9 +71,10 @@ class SessionList(BaseModel):
 class QRCode(BaseModel):
     """Código QR para autenticar una sesión."""
 
-    session_id: str = Field(alias="sessionId")
-    session_name: str = Field(alias="sessionName")
     qr: Any  # Puede ser string (base64) o dict con más info
+    session_id: Optional[str] = Field(default=None, alias="sessionId")
+    session_name: Optional[str] = Field(default=None, alias="sessionName")
+    format: Optional[str] = None
 
     class Config:
         populate_by_name = True
@@ -82,10 +83,11 @@ class QRCode(BaseModel):
 class PairingCode(BaseModel):
     """Código de emparejamiento para autenticar por teléfono."""
 
-    session_id: str = Field(alias="sessionId")
-    session_name: str = Field(alias="sessionName")
-    phone_number: str = Field(alias="phoneNumber")
     code: str
+    phone_number: str = Field(alias="phoneNumber")
+    session_id: Optional[str] = Field(default=None, alias="sessionId")
+    session_name: Optional[str] = Field(default=None, alias="sessionName")
+    expires_at: Optional[str] = Field(default=None, alias="expiresAt")
 
     class Config:
         populate_by_name = True
